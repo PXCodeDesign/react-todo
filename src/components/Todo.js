@@ -7,6 +7,7 @@ function Todo({ text, todoList, todo, setTodoList }) {
 
         if (deletedTodo) {
             setTodoList(todoList.filter((e) => e.id !== todo.id))
+            setSpinner(true);
         }
     }
 
@@ -18,10 +19,10 @@ function Todo({ text, todoList, todo, setTodoList }) {
             >
                 {text}
             </li>
-            <div className='flex'>
+            <div className='flex cursor-pointer'>
                 <button
                     onClick={deleteTodo}
-                    className="bg-r px-4 py-2 text-white font-medium text-lg ">
+                    className="bg-r px-4 py-2 text-white font-medium text-lg hover:opacity-90">
                     Delete
                 </button>
             </div>

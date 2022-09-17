@@ -2,7 +2,6 @@ import Todo from "./Todo"
 
 
 function TodoList({ todoList, setTodoList }) { 
-    debugger;
     return (        
         <ul className='w-[32%] space-y-2'>
             {todoList.map((todo) => (
